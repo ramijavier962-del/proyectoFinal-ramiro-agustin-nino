@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lospichulos - Inicio</title>
+  <link rel="stylesheet" href="Css/sesion.css">
+  <link rel="img" href="img/pichulos venta de stock.png">
+  <link rel="icon" href="img/pichulos venta de stock.png">
+  <link rel="img" href="img/pngfondo.png">
+  <link rel="stylesheet" href="css/video.css">
+</head>       
+<body>
+  
+  <video autoplay muted loop id="video-fondo">
+      <source src="video/video mano ropa.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+  <main class="login-box">
+
+    <section class="logo">
+
+      <div class="icon"><img src="img/pichulos venta de stock.png" alt="logo"></div>
+
+    <p>Bienvenido a Los Pichulos</p>
+
+    </section>
+
+    <form onsubmit="return validar(event)">
+
+  <label>Correo electrónico</label>
+  <!-- El atributo "id" se agregó para que el 
+   JavaScript pueda acceder a este campo -->
+  <input type="email" id="correo" placeholder="ejemplo@gmail.com" required>
+
+  <label>Contraseña</label>
+  <input type="password" id="password" placeholder="********" required>
+
+  <button type="submit" class="btn">
+    Iniciar sesión
+  </button>
+
+</form>
+
+<script>
+   function validar(event) {
+    event.preventDefault(); 
+
+//hacemos una base de datos en el mismo codigo con un usuario y 
+// contraseña para que el login funcione, si el usuario y contraseña 
+// ingresados coinciden con los registrados, se redirige al indexx.html, 
+// de lo contrario se muestra un mensaje de error
+// utilizamos operadores logicos para comparar el usuario y las contraceñas.
+
+
+    const usuarioRegistrado = "adminLospichulos@gmail.com";
+    const contraseniaRegistrada = "123456";
+
+    const correoIngresado = document.getElementById('correo').value;
+    const passwordIngresada = document.getElementById('password').value;
+
+//valida si el correo y la contraseña ingresados coinciden con los registrados,
+
+    if (correoIngresado === usuarioRegistrado && passwordIngresada === contraseniaRegistrada) {
+        alert("¡Ya tienes acceso a la pagina Pichulin!");
+        window.location.href = "indexx.html";
+        return true;
+    } else {
+        alert("El correo o la contraseña son incorrectos. Vuelve a Intenta de nuevo.");
+        return false;
+    }
+  }
+</script>
+
+    <section class="extra">
+
+      <p>¿Olvidaste tu contraseña?</p>
+
+      <a href="recuperar.html">Recuperar acceso</a>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+

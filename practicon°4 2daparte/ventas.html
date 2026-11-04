@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/elstilo.css ">
+    <link rel="icon" href="img/pichulos venta de stock.png">
+    <link rel="stylesheet" href="css/video.css">
+    
+<title>Sistema Lospichulos</title>
+</head>
+
+<body>
+   <video autoplay muted loop id="video-fondo">
+      <source src="video/video mano ropa.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <nav class="sidebar">
+
+    <header class="logo">
+      <img src="img/pichulita.png" alt="imagen logo">
+      <h1>lospichulos</h1>
+      <p>Stock de ropa</p>
+    </header>
+
+    <ul class="menu">
+      <a href="indexx.html"><li>Inicio</li></a>
+      <a href="ventas.html"><li> Registrar venta</li></a>
+      <a href="consultarStock.html"><li> Consultar stock</li></a>
+      <a href="regiprendas.html"><li> Registrar prendas</li></a>
+      <a href="reporte.html"><li> Reportes</li></a>
+      <a href="confi.html"><li> Configuración</li></a>
+    </ul>
+
+  </nav>
+
+ 
+
+  <main class="main">
+
+    <header class="top">
+      <h2>Panel principal</h2>
+
+    </header>
+     
+
+    <section class="table-box">
+
+
+      <header>
+        <h3>Registrar nueva venta</h3>
+      </header>
+
+
+      <br>
+
+
+      <form>
+
+
+        <label>Nombre de la prenda</label>
+        <input type="text"
+        placeholder="Ej: 30 Pantalones"
+        required>
+
+
+        <label>Talles</label>
+        <input type="text"
+        placeholder="Ej: M"
+        required>
+
+
+        <label>Precio</label>
+        <input type="number"
+        placeholder="Ej: 15000"
+        required>
+
+
+        <label>Precio Total</label>
+        <input type="number"
+        placeholder="Ej:$ 10600"
+        required>
+
+
+        <button class="btn" type="submit">
+          Guardar Venta
+        </button>
+
+
+      </form>
+
+
+    </section>
+  </main>
+
+</body>
+</html>
