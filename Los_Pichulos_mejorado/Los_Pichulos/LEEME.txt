@@ -1,8 +1,0 @@
-LOS PICHULOS - VERSION MEJORADA
-
-Abrir iniarsesion.html en el navegador.
-Acceso de demostración: adminLospichulos@gmail.com / 123456
-
-Funciones: alta de prendas, inventario con búsqueda y filtros, ventas con descuento automático de stock, alertas de stock bajo, reportes, exportación CSV, configuración y respaldo/restauración JSON.
-
-IMPORTANTE: esta entrega es una aplicación frontend de demostración. Los datos se guardan en localStorage del navegador y solo están disponibles en ese dispositivo/navegador. El login de demostración no es seguridad real. Para uso comercial multiusuario se necesita backend, base de datos y autenticación segura.

@@ -1,0 +1,18 @@
+LOS PICHULOS - SISTEMA DE GESTION
+
+Para instalar la versión conectada a MySQL con MAMP en Windows, seguí todos los pasos del archivo:
+LEEME_MAMP_WINDOWS.txt
+
+Resumen:
+1) Copiar Los_Pichulos a C:\MAMP\htdocs\Los_Pichulos
+2) Iniciar Apache y MySQL desde MAMP.
+3) Importar database.sql en phpMyAdmin.
+4) Revisar api/config.php (MAMP Windows suele usar MySQL puerto 8889 y root/root).
+5) Abrir http://localhost:8888/Los_Pichulos/install_admin.php
+6) Eliminar install_admin.php después de crear el administrador.
+7) Entrar por http://localhost:8888/Los_Pichulos/iniarsesion.html
+
+Usuario inicial: adminLospichulos@gmail.com
+Contraseña inicial: 123456
+
+Por seguridad, cambiá la contraseña inicial cuando termines de instalar.

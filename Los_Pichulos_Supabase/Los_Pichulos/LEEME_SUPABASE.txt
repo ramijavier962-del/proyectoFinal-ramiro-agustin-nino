@@ -1,0 +1,19 @@
+LOS PICHULOS - VERSIÓN SUPABASE
+
+Esta versión usa Supabase (PostgreSQL + Authentication). No necesita MAMP, Apache, PHP ni MySQL.
+
+1. En Supabase creá un proyecto.
+2. Abrí SQL Editor, creá una consulta nueva, pegá el contenido de supabase.sql y ejecutala.
+3. En Authentication > Users, agregá un usuario con correo y contraseña. Esos datos se usan para iniciar sesión.
+4. En Project Settings > API copiá Project URL y la anon/public key.
+5. Abrí Js/supabase-config.js y reemplazá los dos valores de ejemplo. Usá la clave anon/public, nunca service_role.
+6. Abrí indexx.html mediante Live Server o un hosting estático. No hace falta MAMP.
+7. Iniciá sesión con el usuario que creaste en Authentication > Users.
+
+IMPORTANTE SOBRE SEGURIDAD
+- Las tablas tienen RLS habilitado y las políticas permiten acceso solo a usuarios autenticados.
+- La anon/public key está diseñada para usarse en el frontend; la service_role key es secreta y no debe compartirse.
+- Esta versión guarda el conjunto de productos, ventas y configuración que maneja el frontend. Como la sincronización reemplaza el contenido de esas tablas, no ejecutes varias sesiones editando al mismo tiempo y hacé una copia de los datos antes de pruebas importantes.
+
+CSS INDEPENDIENTE
+Cada página HTML carga su propio CSS dentro de Css/: indexx.css, ventas.css, consultarStock.css, regiprendas.css, reporte.css, confi.css, iniarsesion.css y recuperar.css.
