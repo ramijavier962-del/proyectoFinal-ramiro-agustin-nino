@@ -46,3 +46,59 @@ drop policy if exists "Acceso autenticado a ventas" on public.ventas;
 create policy "Acceso autenticado a ventas" on public.ventas for all to authenticated using (true) with check (true);
 drop policy if exists "Acceso autenticado a configuracion" on public.configuracion;
 create policy "Acceso autenticado a configuracion" on public.configuracion for all to authenticated using (true) with check (true);
+
+-- Registrar una venta y descontar el stock en una sola operación.
+-- Ejecutar esta función después de crear las tablas y las políticas anteriores.
+create or replace function public.registrar_venta(
+  p_id text,
+  p_producto_id text,
+  p_cantidad integer,
+  p_medio_pago varchar(40) default 'Efectivo',
+  p_cliente varchar(120) default ''
+)
+returns jsonb
+language plpgsql
+security invoker
+set search_path = public
+as $$
+declare
+  v_producto public.productos%rowtype;
+  v_total numeric(12,2);
+begin
+  if p_cantidad is null or p_cantidad < 1 then
+    raise exception 'La cantidad debe ser mayor que cero.';
+  end if;
+
+  select * into v_producto
+  from public.productos
+  where id = p_producto_id
+  for update;
+
+  if not found then
+    raise exception 'El producto seleccionado no existe.';
+  end if;
+
+  if v_producto.stock < p_cantidad then
+    raise exception 'Stock insuficiente. Disponibles: %.', v_producto.stock;
+  end if;
+
+  v_total := v_producto.precio * p_cantidad;
+
+  update public.productos
+  set stock = stock - p_cantidad
+  where id = p_producto_id;
+
+  insert into public.ventas (
+    id, producto_id, producto_nombre, talle, cantidad,
+    precio_unitario, total, medio_pago, cliente, fecha
+  ) values (
+    p_id, v_producto.id, v_producto.nombre, v_producto.talle, p_cantidad,
+    v_producto.precio, v_total, coalesce(nullif(p_medio_pago, ''), 'Efectivo'),
+    coalesce(p_cliente, ''), current_date
+  );
+
+  return jsonb_build_object('ok', true, 'mensaje', 'Venta registrada y stock actualizado.', 'total', v_total);
+end;
+$$;
+
+grant execute on function public.registrar_venta(text, text, integer, varchar, varchar) to authenticated;

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#1f1f1f">
+        <title>Registrar venta | Los Pichulos</title>
+        <link rel="icon" href="img/pichulos venta de stock.png">
+        <link rel="stylesheet" href="Css/ventas.css">
+    </head>
+    <body data-page="sales">
+        <div class="app-shell">
+            <aside class="sidebar">
+                <a class="brand" href="indexx.html">
+                    <img src="img/pichulita.png" alt="Logo Los Pichulos">
+                    <span>
+                        <strong>lospichulos</strong>
+                        <small>Gestión de tienda</small>
+                    </span>
+                </a>
+                <nav class="menu" aria-label="Navegación principal">
+                    <a href="indexx.html" data-nav="dashboard">▦ <span>Inicio</span></a>
+                    <a href="ventas.html" data-nav="sales">＋ <span>Registrar venta</span></a>
+                    <a href="consultarStock.html" data-nav="stock">▤ <span>Consultar stock</span></a>
+                    <a href="regiprendas.html" data-nav="products">♧ <span>Registrar prendas</span></a>
+                    <a href="reporte.html" data-nav="reports">▥ <span>Reportes</span></a>
+                    <a href="confi.html" data-nav="settings">⚙ <span>Configuración</span></a>
+                </nav>
+                <div class="sidebar-foot">
+                    <span class="status-dot"></span> Conectado a Supabase
+                </div>
+            </aside>
+            <main class="main">
+                <header class="topbar">
+                    <div>
+                        <p class="eyebrow">LOS PICHULOS / GESTIÓN</p>
+                        <h1>Registrar venta</h1>
+                    </div>
+                    <div class="top-actions">
+                        <span class="today" id="today"></span>
+                        <button class="btn btn-outline" id="logoutBtn" type="button">Cerrar sesión</button>
+                    </div>
+                </header>
+                <div id="app" class="content"></div>
+                <footer class="footer">Los Pichulos · Sistema de gestión de stock <span>Datos conectados a Supabase</span></footer>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="Js/supabase-config.js"></script>
+        <script src="Js/app.js"></script>
+    </body>
+</html>

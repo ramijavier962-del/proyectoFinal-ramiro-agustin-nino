@@ -17,3 +17,6 @@ IMPORTANTE SOBRE SEGURIDAD
 
 CSS INDEPENDIENTE
 Cada página HTML carga su propio CSS dentro de Css/: indexx.css, ventas.css, consultarStock.css, regiprendas.css, reporte.css, confi.css, iniarsesion.css y recuperar.css.
+https://gmvhdifhkbfqtakddhpv.supabase.co/rest/v1/
+gmvhdifhkbfqtakddhpv
+sb_publishable_73MZFG-I-GHBrcKZI9jq6g_TcU2qtxw
