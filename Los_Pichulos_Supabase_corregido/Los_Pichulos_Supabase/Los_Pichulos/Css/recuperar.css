@@ -1,2 +1,560 @@
-/* Hoja de estilos independiente para recuperar.html */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');:root{--bg:#f3f4f6;--panel:#fff;--ink:#222;--muted:#777;--dark:#1f1f1f;--dark2:#2d2d2d;--yellow:#f5c400;--line:#e8e8e8;--red:#c0392b;--green:#198754;--shadow:0 8px 28px #1515150d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}.app-shell{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:250px;background:var(--dark);color:white;padding:25px 18px;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 32px;color:white;text-decoration:none}.brand img{width:58px;height:58px;object-fit:contain}.brand strong{display:block;color:var(--yellow);font-size:22px}.brand small{display:block;color:#aaa;margin-top:4px}.menu{display:grid;gap:8px}.menu a{display:flex;align-items:center;gap:13px;padding:14px 15px;border-radius:10px;color:#ddd;text-decoration:none;font-size:14px;transition:.2s}.menu a:hover,.menu a.active{background:#393939;color:var(--yellow)}.menu a.active{box-shadow:inset 3px 0 var(--yellow)}.sidebar-foot{margin-top:auto;color:#aaa;font-size:12px;padding:16px 8px}.status-dot{display:inline-block;width:8px;height:8px;background:#3cc477;border-radius:50%;margin-right:8px}.main{margin-left:250px;min-height:100vh;padding:30px clamp(18px,4vw,48px) 20px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:28px}.eyebrow{font-size:10px;letter-spacing:1.5px;font-weight:800;color:#999;margin:0 0 8px}.topbar h1{font-size:28px;margin:0;font-weight:800}.top-actions{display:flex;align-items:center;gap:16px}.today{font-size:12px;color:var(--muted)}.content{max-width:1200px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:22px}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:22px;box-shadow:var(--shadow)}.metric-label{color:var(--muted);font-size:13px}.metric-value{font-size:29px;font-weight:800;margin:12px 0 4px}.metric-note{font-size:12px;color:#999}.panel{margin-bottom:20px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.panel h2,.panel h3{margin:0;font-size:17px}.muted{color:var(--muted)}.small{font-size:12px}form .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}label{display:block;font-size:13px;font-weight:600;color:#555;margin-bottom:7px}input,select,textarea{width:100%;padding:12px 13px;border:1px solid #ddd;border-radius:9px;background:#fff;font:inherit;font-size:14px;color:#222;outline:none}input:focus,select:focus,textarea:focus{border-color:#d4ae00;box-shadow:0 0 0 3px #f5c40022}.field{margin-bottom:14px}.btn{border:0;background:var(--yellow);color:#222;padding:12px 17px;border-radius:9px;font-weight:800;font-size:13px;cursor:pointer;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;gap:7px}.btn:hover{filter:brightness(.96)}.btn-outline{background:white;border:1px solid #ddd;color:#333}.btn-danger{background:#fff0ef;color:var(--red)}.btn-sm{padding:8px 11px;font-size:12px}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.toolbar input{max-width:330px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:580px}th{text-align:left;color:#888;font-size:11px;text-transform:uppercase;letter-spacing:.6px;background:#fafafa}th,td{padding:14px 12px;border-bottom:1px solid var(--line);font-size:13px}td{color:#444}tbody tr:hover{background:#fffdf2}.pill{display:inline-block;padding:5px 9px;border-radius:30px;font-size:11px;font-weight:700;background:#eaf7ef;color:var(--green)}.pill.low{background:#fff4dc;color:#9a6a00}.pill.out{background:#ffeded;color:var(--red)}.empty{text-align:center;color:#999;padding:30px}.actions{display:flex;gap:6px}.notice{padding:12px 14px;border-radius:9px;background:#fff8dc;color:#795d00;font-size:13px;margin-bottom:16px}.footer{margin-top:35px;padding:18px 0;border-top:1px solid var(--line);font-size:11px;color:#999;display:flex;justify-content:space-between;gap:12px}.auth-body{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#1f1f1f,#393321)}.auth-card{width:min(430px,100%);background:#fff;border-radius:20px;padding:36px;box-shadow:0 25px 80px #0005}.auth-logo{display:block;width:100px;height:90px;object-fit:contain;margin:0 auto 15px}.auth-card h1{text-align:center;font-size:23px}.auth-card>.muted{text-align:center;font-size:13px;margin-bottom:25px}.auth-card .btn{width:100%;margin-top:10px}.auth-card .eyebrow{text-align:center;color:#9a7d00}.auth-card label{margin:15px 0}.auth-card input{margin-top:7px}.auth-card .small{margin-top:18px;text-align:center}.auth-symbol{text-align:center;font-size:48px}.form-message{font-size:13px;color:var(--red)}.link-btn{box-sizing:border-box}@media(max-width:850px){.sidebar{width:75px;padding:18px 10px}.brand{justify-content:center;padding:0 0 25px}.brand img{width:48px}.brand span,.menu a span,.sidebar-foot{display:none}.menu a{justify-content:center;font-size:19px;padding:14px 5px}.main{margin-left:75px;padding:22px 16px}.grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.topbar{align-items:flex-start;flex-direction:column}.topbar h1{font-size:23px}.grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr!important}.footer{flex-direction:column}.today{display:none}.auth-card{padding:26px}}
+
+/* =====================================================
+   LOS PICHULOS - ESTILOS
+   Página: recuperar.html
+   ===================================================== */
+
+
+/* 1. FUENTE */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* 2. VARIABLES */
+:root {
+    --bg: #f3f4f6;
+    --panel: #fff;
+    --ink: #222;
+    --muted: #777;
+    --dark: #1f1f1f;
+    --dark2: #2d2d2d;
+    --yellow: #f5c400;
+    --line: #e8e8e8;
+    --red: #c0392b;
+    --green: #198754;
+    --shadow: 0 8px 28px #1515150d;
+}
+
+
+/* 3. CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, Arial, sans-serif;
+}
+
+.app-shell {
+    min-height: 100vh;
+}
+
+
+/* 4. BARRA LATERAL */
+.sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 250px;
+    background: var(--dark);
+    color: white;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 8px 32px;
+    color: white;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.brand strong {
+    display: block;
+    color: var(--yellow);
+    font-size: 22px;
+}
+
+.brand small {
+    display: block;
+    color: #aaa;
+    margin-top: 4px;
+}
+
+
+/* 5. MENÚ */
+.menu {
+    display: grid;
+    gap: 8px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 14px 15px;
+    border-radius: 10px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #393939;
+    color: var(--yellow);
+}
+
+.menu a.active {
+    box-shadow: inset 3px 0 var(--yellow);
+}
+
+.sidebar-foot {
+    margin-top: auto;
+    color: #aaa;
+    font-size: 12px;
+    padding: 16px 8px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #3cc477;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
+/* 6. CONTENIDO PRINCIPAL */
+.main {
+    margin-left: 250px;
+    min-height: 100vh;
+    padding: 30px clamp(18px, 4vw, 48px) 20px;
+}
+
+.content {
+    max-width: 1200px;
+}
+
+
+/* 7. BARRA SUPERIOR */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    color: #999;
+    margin: 0 0 8px;
+}
+
+.topbar h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.today {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+/* 8. CUADRÍCULAS Y TARJETAS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.card,
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+}
+
+.panel {
+    margin-bottom: 20px;
+}
+
+.metric-label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.metric-value {
+    font-size: 29px;
+    font-weight: 800;
+    margin: 12px 0 4px;
+}
+
+.metric-note {
+    font-size: 12px;
+    color: #999;
+}
+
+.panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.panel h2,
+.panel h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.small {
+    font-size: 12px;
+}
+
+
+/* 9. FORMULARIOS */
+form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    background: #fff;
+    font: inherit;
+    font-size: 14px;
+    color: #222;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #d4ae00;
+    box-shadow: 0 0 0 3px #f5c40022;
+}
+
+.field {
+    margin-bottom: 14px;
+}
+
+
+/* 10. BOTONES */
+.btn {
+    border: 0;
+    background: var(--yellow);
+    color: #222;
+    padding: 12px 17px;
+    border-radius: 9px;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.btn:hover {
+    filter: brightness(.96);
+}
+
+.btn-outline {
+    background: white;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.btn-danger {
+    background: #fff0ef;
+    color: var(--red);
+}
+
+.btn-sm {
+    padding: 8px 11px;
+    font-size: 12px;
+}
+
+.link-btn {
+    box-sizing: border-box;
+}
+
+
+/* 11. HERRAMIENTAS Y TABLAS */
+.toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.toolbar input {
+    max-width: 330px;
+}
+
+.table-wrap {
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 580px;
+}
+
+th {
+    text-align: left;
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    background: #fafafa;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+}
+
+td {
+    color: #444;
+}
+
+tbody tr:hover {
+    background: #fffdf2;
+}
+
+
+/* 12. ESTADOS Y MENSAJES */
+.pill {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    background: #eaf7ef;
+    color: var(--green);
+}
+
+.pill.low {
+    background: #fff4dc;
+    color: #9a6a00;
+}
+
+.pill.out {
+    background: #ffeded;
+    color: var(--red);
+}
+
+.empty {
+    text-align: center;
+    color: #999;
+    padding: 30px;
+}
+
+.actions {
+    display: flex;
+    gap: 6px;
+}
+
+.notice {
+    padding: 12px 14px;
+    border-radius: 9px;
+    background: #fff8dc;
+    color: #795d00;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.form-message {
+    font-size: 13px;
+    color: var(--red);
+}
+
+
+/* 13. PIE DE PÁGINA */
+.footer {
+    margin-top: 35px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+    font-size: 11px;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+
+/* 14. INICIO DE SESIÓN Y RECUPERACIÓN */
+.auth-body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1f1f1f, #393321);
+}
+
+.auth-card {
+    width: min(430px, 100%);
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 25px 80px #0005;
+}
+
+.auth-logo {
+    display: block;
+    width: 100px;
+    height: 90px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.auth-card h1 {
+    text-align: center;
+    font-size: 23px;
+}
+
+.auth-card > .muted {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.auth-card .btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-card .eyebrow {
+    text-align: center;
+    color: #9a7d00;
+}
+
+.auth-card label {
+    margin: 15px 0;
+}
+
+.auth-card input {
+    margin-top: 7px;
+}
+
+.auth-card .small {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.auth-symbol {
+    text-align: center;
+    font-size: 48px;
+}
+
+
+/* 15. DISEÑO RESPONSIVE */
+@media (max-width: 850px) {
+    .sidebar {
+        width: 75px;
+        padding: 18px 10px;
+    }
+
+    .brand {
+        justify-content: center;
+        padding: 0 0 25px;
+    }
+
+    .brand img {
+        width: 48px;
+    }
+
+    .brand span,
+    .menu a span,
+    .sidebar-foot {
+        display: none;
+    }
+
+    .menu a {
+        justify-content: center;
+        font-size: 19px;
+        padding: 14px 5px;
+    }
+
+    .main {
+        margin-left: 75px;
+        padding: 22px 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .topbar h1 {
+        font-size: 23px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .today {
+        display: none;
+    }
+
+    .auth-card {
+        padding: 26px;
+    }
+}
